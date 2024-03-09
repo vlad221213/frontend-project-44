@@ -3,6 +3,20 @@ import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import app from '../index.js';
 
+const greatestCommonDivisor = (oneNumber, twoNumber) => {
+  let a = oneNumber;
+  let b = twoNumber;
+  while (a !== 0 && b !== 0) {
+    if (a > b) {
+      a %= b;
+    } else {
+      b %= a;
+    }
+  }
+  const gsd = a + b;
+  return gsd;
+};
+
 const brainGsdFunction = (howMuchRounds = 3) => {
   let oneNumber;
   let twoNumber;
@@ -13,14 +27,7 @@ const brainGsdFunction = (howMuchRounds = 3) => {
     oneNumber = _.random(0, 100);
     twoNumber = _.random(0, 100);
     question.push(`${oneNumber} ${twoNumber}`);
-    while (oneNumber !== 0 && twoNumber !== 0) {
-      if (oneNumber > twoNumber) {
-        oneNumber %= twoNumber;
-      } else {
-        twoNumber %= oneNumber;
-      }
-    }
-    gsd = oneNumber + twoNumber;
+    gsd = greatestCommonDivisor(oneNumber, twoNumber);
     expectAnswer.push(`${gsd}`);
   }
   app(question, expectAnswer, howMuchRounds);
