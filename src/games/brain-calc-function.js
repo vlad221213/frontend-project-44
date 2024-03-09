@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import readlineSync from 'readline-sync';
 import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import app from '../index.js';
@@ -32,6 +33,10 @@ const brainCalcFunction = (howMuchRounds = 3) => {
     expectAnswer.push(_.toString(stringToExpAndResult(question[i])));
     operatorArray.splice(0, 3);
   }
-  app(question, expectAnswer, howMuchRounds);
+  console.log('Welcome to the Brain Games!');
+  const name = _.capitalize(readlineSync.question('May I have your name?'));
+  console.log(`Hello, ${name}!`);
+  console.log('What is the result of the expression?');
+  app(question, expectAnswer, name, howMuchRounds);
 };
 export default brainCalcFunction;
