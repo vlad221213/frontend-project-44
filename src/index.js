@@ -10,7 +10,8 @@ const app = (question, expectAnswer, name, howMuchRounds = 3) => {
       if (answer === expectAnswer[i]) {
         console.log('Correct!');
       } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectAnswer[i]}'.\nLet's try again, ${name}`);
+        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectAnswer[i]}'.)`);
+        console.log(`Let's try again, ${name}`);
         break;
       }
     }
