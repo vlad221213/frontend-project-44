@@ -1,11 +1,6 @@
 import readlineSync from 'readline-sync';
-import _ from 'lodash';
 
-const app = (question, expectAnswer, howMuchRounds = 3) => {
-  console.log('Welcome to the Brain Games!');
-  const name = _.capitalize(readlineSync.question('May I have your name?'));
-  console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const app = (question, expectAnswer, name, howMuchRounds = 3) => {
   for (let i = 0; i < howMuchRounds + 1; i += 1) {
     if (i === howMuchRounds) {
       console.log(`Congratulations, ${name}!`);
