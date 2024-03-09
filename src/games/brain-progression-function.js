@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import readlineSync from 'readline-sync';
 import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import app from '../index.js';
@@ -27,6 +28,10 @@ const brainProgressionFunction = (howMuchRounds = 3) => {
     question.push(progressionArray.join(' '));
     progressionArray.splice(0, 10);
   }
-  app(question, expectAnswer);
+  console.log('Welcome to the Brain Games!');
+  const name = _.capitalize(readlineSync.question('May I have your name?'));
+  console.log(`Hello, ${name}!`);
+  console.log('What number is missing in the progression?');
+  app(question, expectAnswer, name, howMuchRounds);
 };
 export default brainProgressionFunction;
