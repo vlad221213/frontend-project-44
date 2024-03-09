@@ -5,6 +5,7 @@
 ```
 make install
 ```
+###examples:
 [![asciicast](https://asciinema.org/a/ovNRzD5qoS6zW1QSWNSjjxIRl.svg)](https://asciinema.org/a/ovNRzD5qoS6zW1QSWNSjjxIRl)
 [![asciicast](https://asciinema.org/a/VvYyxiLt8nMx1LCQS0puiHLuA.svg)](https://asciinema.org/a/VvYyxiLt8nMx1LCQS0puiHLuA)
 [![asciicast](https://asciinema.org/a/JtCEJeO9ocWzpnehogwGTeiOS.svg)](https://asciinema.org/a/JtCEJeO9ocWzpnehogwGTeiOS)
