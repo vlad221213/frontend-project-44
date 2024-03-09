@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import readlineSync from 'readline-sync';
 import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import app from '../index.js';
@@ -30,6 +31,10 @@ const brainGcdFunction = (howMuchRounds = 3) => {
     gcd = greatestCommonDivisor(oneNumber, twoNumber);
     expectAnswer.push(`${gcd}`);
   }
-  app(question, expectAnswer, howMuchRounds);
+  console.log('Welcome to the Brain Games!');
+  const name = _.capitalize(readlineSync.question('May I have your name?'));
+  console.log(`Hello, ${name}!`);
+  console.log('Find the greatest common divisor of given numbers.');
+  app(question, expectAnswer, name, howMuchRounds);
 };
 export default brainGcdFunction;
