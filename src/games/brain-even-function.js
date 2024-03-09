@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import readlineSync from 'readline-sync';
 import _ from 'lodash';
 // eslint-disable-next-line import/extensions
 import app from '../index.js';
@@ -16,6 +17,10 @@ const brainEvenFunction = (howMuchRounds = 3) => {
       expectAnswer.push('no');
     }
   }
-  app(question, expectAnswer, howMuchRounds);
+  console.log('Welcome to the Brain Games!');
+  const name = _.capitalize(readlineSync.question('May I have your name?'));
+  console.log(`Hello, ${name}!`);
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  app(question, expectAnswer, name, howMuchRounds);
 };
 export default brainEvenFunction;
