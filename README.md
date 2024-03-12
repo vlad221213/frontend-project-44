@@ -14,23 +14,23 @@ make install
 ### Description:
 ### Project of 5 console math games
 
-#### brain-even
+### brain-even
 ##### Number parity game.
 ##### The player is given a number, his task is to calculate whether it is even.
 [![asciicast](https://asciinema.org/a/ovNRzD5qoS6zW1QSWNSjjxIRl.svg)](https://asciinema.org/a/ovNRzD5qoS6zW1QSWNSjjxIRl)
-#### brain-calc
+### brain-calc
 ##### Expression calculation game.
 ##### The player is given the expression, his task is to calculate.
 [![asciicast](https://asciinema.org/a/VvYyxiLt8nMx1LCQS0puiHLuA.svg)](https://asciinema.org/a/VvYyxiLt8nMx1LCQS0puiHLuA)
-#### brain-gcd
+### brain-gcd
 ##### Find greatest common divisor game.
 ##### The player is given two numbers, his task is to calculate the greatest common divisor.
 [![asciicast](https://asciinema.org/a/JtCEJeO9ocWzpnehogwGTeiOS.svg)](https://asciinema.org/a/JtCEJeO9ocWzpnehogwGTeiOS)
-#### brain-progression
+### brain-progression
 ##### Game to find the missing element of an arithmetic progression.
 ##### The player is given an arithmetic progression with a missing element, his task is to calculate the missing element.
 [![asciicast](https://asciinema.org/a/YGLCGrItwoy58EvPTxwLiWvFy.svg)](https://asciinema.org/a/YGLCGrItwoy58EvPTxwLiWvFy)
-#### brain-prime
+### brain-prime
 ##### Primality test game.
 ##### The player is given a number, his task is to calculate whether it is prime.
 [![asciicast](https://asciinema.org/a/wMtlkVrOjGecwlJqchIWDoFyZ.svg)](https://asciinema.org/a/wMtlkVrOjGecwlJqchIWDoFyZ)
