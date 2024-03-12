@@ -1,11 +1,10 @@
+/* eslint-disable import/extensions */
 /* eslint-disable no-console */
-import readlineSync from 'readline-sync';
-import _ from 'lodash';
-// eslint-disable-next-line import/extensions
+import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
 const arrayGeneration = (array, arrayLength = 10, progressionStep = 2) => {
-  let startingNumber = _.random(1, 9);
+  let startingNumber = getRandomNumber(1, 9);
   for (let i = 0; i < arrayLength; i += 1) {
     array.push(startingNumber);
     startingNumber += progressionStep;
@@ -13,25 +12,23 @@ const arrayGeneration = (array, arrayLength = 10, progressionStep = 2) => {
   return array;
 };
 
-const brainProgressionFunction = (howMuchRounds = 3) => {
+const findProgressionNumber = (roundsCount = 3) => {
   let progressionStep;
   let skipPosition;
   const progressionArray = [];
   const question = [];
   const expectAnswer = [];
-  for (let i = 0; i < howMuchRounds; i += 1) {
-    progressionStep = _.random(2, 8);
-    skipPosition = _.random(0, 9);
+  const questionsCount = roundsCount;
+  for (let i = 0; i < questionsCount; i += 1) {
+    progressionStep = getRandomNumber(2, 8);
+    skipPosition = getRandomNumber(0, 9);
     arrayGeneration(progressionArray, 10, progressionStep);
     expectAnswer.push(`${progressionArray[skipPosition]}`);
     progressionArray.splice(skipPosition, 1, '..');
     question.push(progressionArray.join(' '));
     progressionArray.splice(0, 10);
   }
-  console.log('Welcome to the Brain Games!');
-  const name = _.capitalize(readlineSync.question('May I have your name?'));
-  console.log(`Hello, ${name}!`);
-  console.log('What number is missing in the progression?');
-  app(question, expectAnswer, name, howMuchRounds);
+  const gamesRules = 'What number is missing in the progression?';
+  app(question, expectAnswer, gamesRules, roundsCount);
 };
-export default brainProgressionFunction;
+export default findProgressionNumber;
