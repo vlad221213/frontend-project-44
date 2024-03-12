@@ -2,12 +2,12 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/vlad221213/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/vlad221213/frontend-project-44/actions)",
+  "description": "Project of 5 console math games.[![Actions Status](https://github.com/vlad221213/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/vlad221213/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Plotnikov Vladislav",
   "license": "ISC",
   "bin": {
     "brain-games": "bin/brain-games.js",
