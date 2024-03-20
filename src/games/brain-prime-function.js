@@ -3,7 +3,7 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const findPrimeNumbers = (number) => {
+const isNumberPrime = (number) => {
   if (number === 2) {
     return true;
   }
@@ -15,13 +15,13 @@ const findPrimeNumbers = (number) => {
   return number !== 1;
 };
 
-const isNumberPrime = (roundsCount = 3) => {
+const findPrimeNumber = (roundsCount = 3) => {
   const question = [];
   const expectAnswer = [];
   const questionsCount = roundsCount;
   for (let i = 0; i < questionsCount; i += 1) {
     question.push(getRandomNumber(2, 100));
-    if (findPrimeNumbers(question[i]) === true) {
+    if (isNumberPrime(question[i])) {
       expectAnswer.push('yes');
     } else {
       expectAnswer.push('no');
@@ -30,4 +30,4 @@ const isNumberPrime = (roundsCount = 3) => {
   const gamesRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   app(question, expectAnswer, gamesRules, roundsCount);
 };
-export default isNumberPrime;
+export default findPrimeNumber;

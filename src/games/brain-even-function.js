@@ -3,7 +3,17 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const isNumberEven = (roundsCount = 3) => {
+const isNumberEven = (number) => {
+  let result;
+  if (number % 2 === 0) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
+};
+
+const findEvenNumber = (roundsCount = 3) => {
   let number = 0;
   const question = [];
   const expectAnswer = [];
@@ -11,7 +21,7 @@ const isNumberEven = (roundsCount = 3) => {
   for (let i = 0; i < questionsCount; i += 1) {
     number = getRandomNumber(0, 99);
     question.push(number);
-    if (number % 2 === 0) {
+    if (isNumberEven(number)) {
       expectAnswer.push('yes');
     } else {
       expectAnswer.push('no');
@@ -20,4 +30,4 @@ const isNumberEven = (roundsCount = 3) => {
   const gamesRules = 'Answer "yes" if the number is even, otherwise answer "no".';
   app(question, expectAnswer, gamesRules, roundsCount);
 };
-export default isNumberEven;
+export default findEvenNumber;
