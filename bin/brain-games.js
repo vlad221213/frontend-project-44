@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-// eslint-disable-next-line import/extensions
+/* eslint-disable import/extensions */
 import askNameAndGreet from '../src/games/cli.js';
 
 askNameAndGreet();
